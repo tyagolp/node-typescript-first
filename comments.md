@@ -1,0 +1,1 @@
+ctrl + . => Implementa a interface na classe atual
