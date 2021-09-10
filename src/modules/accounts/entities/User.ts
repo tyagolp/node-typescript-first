@@ -16,7 +16,7 @@ class User {
     password: string;
 
     @Column()
-    driver_license: boolean;
+    driver_license: string;
 
     @Column()
     isAdmin: boolean;
