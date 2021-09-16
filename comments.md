@@ -1,5 +1,9 @@
 #Commands
 
+
+Arquitetura Solid/TDD
+
+
 *docker-compose*
 
 docker-compose up => inicia o docker
@@ -13,6 +17,8 @@ docker-compose up --force-recreate => inicia o docker e força a re criação do
 docker-compose start
 
 docker-compose stop
+
+docker-compose restart
 
 
 *typeorm*
