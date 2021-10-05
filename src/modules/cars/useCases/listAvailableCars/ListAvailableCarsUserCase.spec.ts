@@ -41,11 +41,10 @@ describe("List Cars", () => {
             category_id: "category_id",
         });
 
-        const cars = await listCarsUserCase.execute({
+        const cars = await listAvailableCarsUserCase.execute({
             brand: "Car_brand_test",
         });
 
-        console.log(cars);
         expect(cars).toEqual([car]);
     });
 
@@ -60,11 +59,10 @@ describe("List Cars", () => {
             category_id: "category_id",
         });
 
-        const cars = await listCarsUserCase.execute({
+        const cars = await listAvailableCarsUserCase.execute({
             name: "Car3",
         });
 
-        console.log(cars);
         expect(cars).toEqual([car]);
     });
 
@@ -79,11 +77,10 @@ describe("List Cars", () => {
             category_id: "123456",
         });
 
-        const cars = await listCarsUserCase.execute({
+        const cars = await listAvailableCarsUserCase.execute({
             category_id: "123456",
         });
 
-        console.log(cars);
         expect(cars).toEqual([car]);
     });
 });
