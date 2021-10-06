@@ -10,7 +10,7 @@ export class CreateSpecificationsCars1633368440030
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "spacifications_cars",
+                name: "specifications_cars",
                 columns: [
                     {
                         name: "car_id",
@@ -30,7 +30,7 @@ export class CreateSpecificationsCars1633368440030
         );
 
         await queryRunner.createForeignKey(
-            "spacifications_cars",
+            "specifications_cars",
             new TableForeignKey({
                 name: "FKSpecificationCar",
                 referencedTableName: "specifications",
@@ -41,7 +41,7 @@ export class CreateSpecificationsCars1633368440030
             })
         );
         await queryRunner.createForeignKey(
-            "spacifications_cars",
+            "specifications_cars",
             new TableForeignKey({
                 name: "FKCarSpecification",
                 referencedTableName: "cars",
@@ -55,14 +55,14 @@ export class CreateSpecificationsCars1633368440030
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropForeignKey(
-            "spacifications_cars",
+            "specifications_cars",
             "FKSpecificationCar"
         );
         await queryRunner.dropForeignKey(
-            "spacifications_cars",
+            "specifications_cars",
             "FKCarSpecification"
         );
 
-        await queryRunner.dropTable("spacifications_cars");
+        await queryRunner.dropTable("specifications_cars");
     }
 }
