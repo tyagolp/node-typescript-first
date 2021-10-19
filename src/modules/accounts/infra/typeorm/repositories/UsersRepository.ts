@@ -9,7 +9,7 @@ class UsersRepository implements IUsersRepository {
     private repository: Repository<User>;
 
     constructor() {
-        this.repository = new getRepository(User);
+        this.repository = getRepository(User);
     }
 
     async create({
